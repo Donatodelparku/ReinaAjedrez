@@ -10,6 +10,13 @@ public class Posicion {
 		setColumna(columna);
 	}
 	
+	public Posicion(Posicion posicion) {
+		if (posicion == null) {
+			throw new NullPointerException();
+		}
+		fila = posicion.fila;
+		columna = posicion.columna;
+	}
 	
 	private int getFila() {
 		return fila;
