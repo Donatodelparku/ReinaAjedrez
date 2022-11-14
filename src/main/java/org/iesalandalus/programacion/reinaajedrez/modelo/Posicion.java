@@ -24,10 +24,13 @@ public class Posicion {
 		this.columna = columna;
 	}
 	
-	public static void main(String[] args) {
-		Posicion posi = new Posicion();
-		posi.setColumna('u');
-	}
+	
+	
+	
+//	public static void main(String[] args) {
+//		Posicion posi = new Posicion();
+//		posi.setColumna('u');
+//	}
 	
 }
 
