@@ -7,9 +7,17 @@ public class Reina {
 	
 	public Reina() {
 		color = Color.BLANCO;
-		Posicion posicion = new Posicion(1,'d');
+		posicion = new Posicion(1,'d');
 	}
 
+	public Reina(Color color) {
+		setColor(color);
+		if (color == Color.NEGRO ) {
+			posicion = new Posicion(8,'d');
+		} else {
+			posicion = new Posicion(1,'d');
+		}
+	}
 	
 	public Color getColor() {
 		return color;
