@@ -5,6 +5,12 @@ public class Reina {
 	private Color color;
 	private Posicion posicion;
 	
+	public Reina() {
+		color = Color.BLANCO;
+		Posicion posicion = new Posicion(1,'d');
+	}
+
+	
 	public Color getColor() {
 		return color;
 	}
