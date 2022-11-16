@@ -17,15 +17,15 @@ public class Consola {
 	}
 
 	public static int elegirOpcionMenu() {
-		int opcion;
+		int opcionMenu;
 		System.out.println("---- ELIGE UNA OPCION (1 - 4) ----");
 		do {
-			opcion = Entrada.entero();
-			if (opcion < 1 || opcion > 4) {
+			opcionMenu = Entrada.entero();
+			if (opcionMenu < 1 || opcionMenu > 4) {
 				System.out.println("ERROR: Opción fuera de parámetros, introdúcela de nuevo: ");
 			}
-		} while (opcion < 1 || opcion > 4);
-		return opcion;
+		} while (opcionMenu < 1 || opcionMenu > 4);
+		return opcionMenu;
 	}
 
 	public static Color elegirColor() {
@@ -103,6 +103,18 @@ public class Consola {
 		
 		return direccion;
 		
+	}
+	
+	public static int elegirPasos() {
+		int opcionPasos;
+		System.out.println("---- ELIGE UN NÚMERO DE PASOS POSITIVOS ----");
+		do {
+			opcionPasos = Entrada.entero();
+			if (opcionPasos <= 0) {
+				System.out.println("ERROR: pasos no válidos, introdúcelos de nuevo: ");
+			}
+		} while (opcionPasos <= 0);
+		return opcionPasos;
 	}
 
 //	public static void main(String[] args) {
