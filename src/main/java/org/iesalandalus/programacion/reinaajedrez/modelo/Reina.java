@@ -139,11 +139,11 @@ public class Reina {
 	
 	
 	
-	public static void main(String[] args) throws OperationNotSupportedException {
-		Reina reina = new Reina();
-		System.out.println(reina);
-		reina.mover(Direccion.NOROESTE, 2);
-		System.out.println(reina);
-	}
+//	public static void main(String[] args) throws OperationNotSupportedException {
+//		Reina reina = new Reina();
+//		System.out.println(reina);
+//		reina.mover(Direccion.NOROESTE, 2);
+//		System.out.println(reina);
+//	}
 	
 }
