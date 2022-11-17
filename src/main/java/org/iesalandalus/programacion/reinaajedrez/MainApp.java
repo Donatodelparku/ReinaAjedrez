@@ -46,11 +46,9 @@ public class MainApp {
 			crearReinaColor();
 			break;
 		case 3:
-			if (reina == null) {
-				System.out.println("ERROR: Reina es nulo");
-			} else {
+			if (reina != null) {
 				mover();
-			}
+			} 
 			break;
 		case 4:
 			Consola.despedirse();
@@ -70,7 +68,5 @@ public class MainApp {
 				mostrarReina();
 			}
 		} while (opcion != 4);
-		
-		Consola.despedirse();
 	}
 }

@@ -1,5 +1,8 @@
-package org.iesalandalus.programacion.reinaajedrez.modelo;
+package org.iesalandalus.programacion.reinaajedrez;
 
+import org.iesalandalus.programacion.reinaajedrez.modelo.Color;
+
+import org.iesalandalus.programacion.reinaajedrez.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -116,8 +119,10 @@ public class Consola {
 		} while (opcionPasos <= 0);
 		return opcionPasos;
 	}
+	
+	public static void despedirse() {
+		System.out.println("Adiós, socio");
+	}
 
-//	public static void main(String[] args) {
-//		Consola.mostrarMenu();
-//	}
+
 }
