@@ -7,18 +7,18 @@ import org.iesalandalus.programacion.reinaajedrez.modelo.Direccion;
 
 public class MainApp {
 	
-	private Reina reina;
+	private static Reina reina;
 	
-	private void crearReinaDefecto() {
+	private static void crearReinaDefecto() {
 		reina = new Reina();
 	}
 	
-	private void crearReinaColor() {
+	private static void crearReinaColor() {
 		Color color = Consola.elegirColor();
 		reina = new Reina(color);
 	}
 	
-	private void mover() {
+	private static void mover() {
 		Consola.mostrarMenuDirecciones();
 		Direccion direccion = Consola.elegirDireccion();
 		int pasos = Consola.elegirPasos();
@@ -29,15 +29,15 @@ public class MainApp {
 		}
 	}
 	
-	private void mostrarReina() {
+	private static void mostrarReina() {
 		if (reina == null) {
 			System.out.println("ERROR: No hay reina aún");
 		} else {
-			reina.toString();
+			System.out.println(reina);
 		}
 	}
 	
-	private void ejecutarOpcion(int opcion) {
+	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
 		case 1: 
 			crearReinaDefecto();
@@ -46,7 +46,11 @@ public class MainApp {
 			crearReinaColor();
 			break;
 		case 3:
-			mover();
+			if (reina == null) {
+				System.out.println("ERROR: Reina es nulo");
+			} else {
+				mover();
+			}
 			break;
 		case 4:
 			Consola.despedirse();
@@ -57,5 +61,16 @@ public class MainApp {
 	
 	public static void main(String[] args) {
 		
+		int opcion;
+		do {
+			Consola.mostrarMenu();
+			opcion = Consola.elegirOpcionMenu();
+			ejecutarOpcion(opcion);
+			if (opcion != 4) {
+				mostrarReina();
+			}
+		} while (opcion != 4);
+		
+		Consola.despedirse();
 	}
 }

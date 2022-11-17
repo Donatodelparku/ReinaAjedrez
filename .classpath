@@ -25,6 +25,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
-	<classpathentry kind="lib" path="lib/utilidades/Entrada.java"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
